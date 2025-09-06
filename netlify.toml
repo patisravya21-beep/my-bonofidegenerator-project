@@ -1,0 +1,16 @@
+# Netlify configuration file
+# This file tells Netlify how to build and deploy your site.
+
+[build]
+  # Command to build the project
+  command = "yarn build"
+  
+  # The directory that contains the built site
+  publish = "dist"
+
+# Redirect rule for Single Page Applications (SPAs)
+# This ensures that all routes are handled by React Router.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
